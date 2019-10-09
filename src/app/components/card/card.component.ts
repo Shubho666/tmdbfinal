@@ -1,5 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
-import {MovieService}  from '../../services/movie.service';
+import { Component, OnInit, Input } from '@angular/core';
+import {MovieService} from '../../services/movie.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -9,13 +9,13 @@ import {Router} from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
-  constructor(private movieService: MovieService,private router:Router) { }
+  constructor(private movieService: MovieService, private router: Router) { }
   @Input() movie;
   ngOnInit() {
   }
-  movieDetails(){
-    //console.log('card working');
-    this.router.navigate(["/movie-details/"+this.movie.id]);
+  movieDetails() {
+    // console.log('card working');
+    this.router.navigate(['/movie-details/' + this.movie.id]); //on being clicked goes to the specified router link
 
   }
 

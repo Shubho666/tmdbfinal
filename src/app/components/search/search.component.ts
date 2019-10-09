@@ -11,19 +11,19 @@ import { ActivatedRoute } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   movieSearch;
-  constructor(private searchService:SearchService,private route: ActivatedRoute){}
-  ngOnInit(){
-    //this.getTrending();
-    //console.log(this.route.snapshot.paramMap.get('searchQuery'));
-    
+  constructor(private searchService: SearchService, private route: ActivatedRoute) {}
+  ngOnInit() {
+    // this.getTrending();
+    // console.log(this.route.snapshot.paramMap.get('searchQuery'));
 
-    this.searchService.getSearch(this.route.snapshot.paramMap.get('searchQuery')).subscribe(movie => this.movieSearch=movie.results);
-    
+
+    this.searchService.getSearch(this.route.snapshot.paramMap.get('searchQuery')).subscribe(movie => this.movieSearch = movie.results);
+
   }
 
   // loadsearch(){
   //   this.searchService.getSearch(this.route.snapshot.paramMap.get('searchQuery')).subscribe(movie => this.movieSearch=movie.results);
-    
+
   // }
 
   // reloadwindow(){

@@ -7,3 +7,16 @@
 .example-header-image {
     background-size: cover;
 }
+
+#card-image{
+  height: 360px;
+}
+
+#card-header{
+  height: 100px;
+}
+
+
+#card-content{
+  height: 120px;
+}

@@ -11,7 +11,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
-import {HttpClientModule}  from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { TrendingMovieComponent } from './components/trending-movie/trending-movie.component';
@@ -35,7 +35,7 @@ import {FormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    
+
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
@@ -43,7 +43,7 @@ import {FormsModule} from '@angular/forms';
     MatFormFieldModule,
     MatCardModule,
     HttpClientModule,
-    ReactiveFormsModule,MatButtonModule,FormsModule,
+    ReactiveFormsModule, MatButtonModule, FormsModule,
     MatMenuModule
   ],
   providers: [],

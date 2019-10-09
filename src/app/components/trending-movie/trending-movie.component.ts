@@ -7,20 +7,20 @@ import {MovieService} from '../../services/movie.service';
   styleUrls: ['./trending-movie.component.css']
 })
 export class TrendingMovieComponent implements OnInit {
-  
+
 
 
   movieTrending;
-  constructor(private movieService:MovieService){}
-  ngOnInit(){
+  constructor(private movieService: MovieService) {}
+  ngOnInit() {
     this.getTrending();
   }
 
 
-  getTrending():void{
-    //console.log('movie-detail');
-    this.movieService.getTrending().subscribe(movie => this.movieTrending=movie.results);
+  getTrending(): void {
+    // console.log('movie-detail');
+    this.movieService.getTrending().subscribe(movie => this.movieTrending = movie.results);
   }
-  
+
 
 }

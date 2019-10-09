@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -8,12 +8,11 @@ import {Router} from '@angular/router'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'theMovieDataBaseApp';
-  constructor(private router:Router,private fb:FormBuilder){}
+  constructor(private router: Router, private fb: FormBuilder) {}
   // getTrending(){
-    formVar: FormGroup;
-
+  formVar: FormGroup;
   ngOnInit() {
     this.formVar = this.fb.group({
       searchname: ''
@@ -21,8 +20,8 @@ export class AppComponent {
 
   }
   onSubmit() {
-    //console.log(this.formVar.value.searchname);
-    this.router.navigate(["/search/"+this.formVar.value.searchname]);
+    // console.log(this.formVar.value.searchname);
+    this.router.navigate(['/search/' + this.formVar.value.searchname]);
   }
   // }
   // movieSearch;
@@ -38,10 +37,10 @@ export class AppComponent {
   //   //this.router.navigate(["/search/"+this.searchForm.value.searchInput])
   //   // window.location.href="/search/"+this.searchForm.value.searchInput;
   // }
-  
+
   // getSearch(h): void{
   //   console.log('submit working');
   //   console.log(typeof(h));
   // }
-  
+
 }

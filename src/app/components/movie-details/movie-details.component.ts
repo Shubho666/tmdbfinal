@@ -9,12 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movieDescription; 
-  constructor(private descriptionService:DescriptionService,private route: ActivatedRoute) { }
+  movieDescription;
+  constructor(private descriptionService: DescriptionService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.descriptionService.getDescription(this.route.snapshot.paramMap.get('movieId')).subscribe(movie => this.movieDescription=movie);
-    
+    this.descriptionService.getDescription(this.route.snapshot.paramMap.get('movieId')).subscribe(movie => this.movieDescription = movie);
+    // gets the movieId from link and fetches the details
+
   }
 
 }

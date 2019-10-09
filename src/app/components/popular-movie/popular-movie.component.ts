@@ -8,16 +8,16 @@ import {MovieService} from '../../services/movie.service';
 })
 export class PopularMovieComponent implements OnInit {
 
-  constructor(private movieService:MovieService ) { }
+  constructor(private movieService: MovieService ) { }
+  moviePopular;
 
   ngOnInit() {
     this.getPopular();
   }
-  moviePopular;
-  getPopular():void{
+  getPopular(): void {
     console.log('popular');
-    this.movieService.getPopular().subscribe(movie => this.moviePopular=movie.results);
-    
+    this.movieService.getPopular().subscribe(movie => this.moviePopular = movie.results);
+
   }
 
 }
