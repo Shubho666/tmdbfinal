@@ -19,13 +19,15 @@
         <button mat-menu-item>Now Playing</button>
       </mat-menu>
 
-      <button mat-menu-item [matMenuTriggerFor]="beforeMenu">TV Shows</button>
+      <!-- <button mat-menu-item [matMenuTriggerFor]="beforeMenu">TV Shows</button>
       <mat-menu #beforeMenu="matMenu" >
         <button mat-menu-item>Popular</button>
         <button mat-menu-item>Top Rated</button>
         <button mat-menu-item>On TV</button>
         <button mat-menu-item>Airing Today</button>
-      </mat-menu>
+      </mat-menu> -->
+      <button mat-menu-item routerLink='/library'>Library</button>
+      
 
 
       <!-- <button mat-menu-item [matMenuTriggerFor]="afterMenu">People</button>

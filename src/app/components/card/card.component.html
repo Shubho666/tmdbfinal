@@ -13,7 +13,8 @@
         </p>
     </mat-card-content> -->
     <mat-card-actions>
-        <button mat-button>LIKE</button>
+        <button mat-button *ngIf="flag1" (click)=deleteCollection()>UNLIKE</button>
+        <button mat-button *ngIf="flag" (click)=addCollection()>LIKE</button>
         <button mat-button>COMMENT</button>
     </mat-card-actions>
 </mat-card>

@@ -1,0 +1,11 @@
+<!-- <p>library works!</p>
+<button (click)=showfav()>show</button> -->
+
+<!-- <div >
+    <app-card *ngFor="let movie of movieCollection" [movie]=movie [flag]=true></app-card>
+ </div> -->
+ <div id="cardStyle">
+    <div *ngFor="let movie of movieCollection" >
+        <app-card [movie]=movie [flag]=false [flag1]=true></app-card>
+    </div>
+</div>

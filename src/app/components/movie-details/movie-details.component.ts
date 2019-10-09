@@ -9,13 +9,31 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movieDescription;
+  movieDescription;str;
   constructor(private descriptionService: DescriptionService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.descriptionService.getDescription(this.route.snapshot.paramMap.get('movieId')).subscribe(movie => this.movieDescription = movie);
     // gets the movieId from link and fetches the details
 
+  }
+  addCollection(): void{
+    if(localStorage.length){
+    this.str=localStorage.getItem('id');
+    let collection:Array<string>;
+    collection=this.str.split(",");let y=0;
+    for (var item in collection)
+    {
+      if(collection[item]==this.movieDescription.id) {y=1;break;}
+    }
+    if(y==0)
+    {collection.push(this.movieDescription.id);}
+    this.str=collection.toString();
+    localStorage.setItem('id',this.str);
+    }
+    else{
+      localStorage.setItem('id',this.movieDescription.id);
+    }
   }
 
 }
