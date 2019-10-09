@@ -1,0 +1,16 @@
+
+<div id="main-div">
+    <h1>{{movieDescription.original_title}}</h1>
+    <img id="image-property" src="https://image.tmdb.org/t/p/original{{ movieDescription.poster_path }}" alt={{movieDescription.origal_title}}>
+    <h2>Genres</h2>
+    <div *ngFor="let genre of movieDescription.genres">
+        {{genre.name}}
+    </div>
+    <span></span><h2>Overview</h2>
+    <p style="text-align: left">{{movieDescription.overview}}</p>
+    <h2>Popularity</h2>
+    <span >{{movieDescription.popularity}}</span>
+    <h2>Release Date, Revenue and Runtime</h2>
+    <span>{{movieDescription.release_date}} ${{movieDescription.revenue}} {{movieDescription.runtime}} minutes</span>
+</div>
+

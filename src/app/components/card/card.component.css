@@ -1,0 +1,9 @@
+.example-card {
+    max-width: 15rem;
+    display: inline-block;
+    margin:1rem;
+}
+  
+.example-header-image {
+    background-size: cover;
+}

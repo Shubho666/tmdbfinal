@@ -1,0 +1,59 @@
+/* button{
+    background: black;
+    color:white;
+    box-shadow: 0ch;
+} */
+/* html,body {
+    width:95%;
+} */
+
+.headeroptions{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    
+}
+.headeroptions button{
+    width:6rem;
+}
+
+#toolbar2{
+    /*width: 100rem;*/
+    background-color: grey;
+    margin-top: 50px;
+    
+    
+} 
+.fixed-menu1{
+    position: fixed;
+    top: 0;
+    z-index:999;
+    
+    
+
+}
+
+#search-item{
+    width:100% ;
+}
+
+#top-tool-bar{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .example-card{
+    max-width:300px;
+    display: inline-block;
+} */
+@media only screen and (max-width:375px)
+{
+ 
+    /* .headeroptions button{
+        width:1rem;
+    } */
+    #logo{
+        visibility: hidden;
+        position: fixed;
+    }
+    
+}

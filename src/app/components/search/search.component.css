@@ -1,0 +1,15 @@
+#toolbar2{
+    /*width: 100rem;*/
+    background-color: grey;
+    /* position: absolute;
+    top: 0px;
+    z-index:1; */
+    
+    
+} 
+#cardStyle{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+    
