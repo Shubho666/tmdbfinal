@@ -19,7 +19,7 @@ export class PopularMovieComponent implements OnInit {
     this.movieService.getPopular().subscribe(movie => this.moviePopular = movie.results);
 
   }
-  
+
 
 
 }

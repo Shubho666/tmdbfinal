@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'search/:searchQuery' , component: SearchComponent},
   { path: 'search' , component: TrendingMovieComponent},
   { path: 'movie-details/:movieId', component: MovieDetailsComponent},
-  { path: 'library',component:LibraryComponent}
+  { path: 'library', component: LibraryComponent}
   // { path: 'heroes', component: HeroesComponent }
 ];
 

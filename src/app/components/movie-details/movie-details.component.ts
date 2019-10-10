@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movieDescription;str;
+  movieDescription; str;
   constructor(private descriptionService: DescriptionService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -17,22 +17,37 @@ export class MovieDetailsComponent implements OnInit {
     // gets the movieId from link and fetches the details
 
   }
-  addCollection(): void{
-    if(localStorage.length){
-    this.str=localStorage.getItem('id');
-    let collection:Array<string>;
-    collection=this.str.split(",");let y=0;
-    for (var item in collection)
-    {
-      if(collection[item]==this.movieDescription.id) {y=1;break;}
+  // addCollection(): void {
+  //   if (localStorage.length) {
+  //   this.str = localStorage.getItem('id');
+  //   let collection: Array<string>;
+  //   collection = this.str.split(','); let y = 0;
+  //   for (const item in collection) {
+  //     if (collection[item] === this.movieDescription.id) {y = 1; break; }
+  //   }
+  //   if (y === 0) {collection.push(this.movieDescription.id); }
+  //   this.str = collection.toString();
+  //   localStorage.setItem('id', this.str);
+  //   } else {
+  //     localStorage.setItem('id', this.movieDescription.id);
+  //   }
+  // }
+
+  addCollection(): void {
+    if (localStorage.length) {
+    this.str = localStorage.getItem('id');
+    let collection: Array<string>;
+    collection = this.str.split(','); let y = 0;
+    for (const item in collection) {
+
+      if (collection[item] === (JSON.stringify(this.movieDescription.id))) {y = 1; break; }
     }
-    if(y==0)
-    {collection.push(this.movieDescription.id);}
-    this.str=collection.toString();
-    localStorage.setItem('id',this.str);
-    }
-    else{
-      localStorage.setItem('id',this.movieDescription.id);
+    if (y === 0) {collection.push(this.movieDescription.id); }
+    this.str = collection.toString();
+    localStorage.setItem('id', this.str);
+    } else {
+      // console.log(this.movieDescription);
+      localStorage.setItem('id', this.movieDescription.id);
     }
   }
 

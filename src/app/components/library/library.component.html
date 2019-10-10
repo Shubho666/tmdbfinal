@@ -6,6 +6,6 @@
  </div> -->
  <div id="cardStyle">
     <div *ngFor="let movie of movieCollection" >
-        <app-card [movie]=movie [flag]=false [flag1]=true></app-card>
+        <app-card [movie]=movie (someEvent)="deleteId($event)" [flag]=false [flag1]=true [flagcard]=true></app-card>
     </div>
 </div>

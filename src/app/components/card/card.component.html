@@ -1,6 +1,6 @@
 
 
-<mat-card class="example-card" >
+<mat-card class="example-card" *ngIf="flagcard">
     <mat-card-header id="card-header" (click)=movieDetails()>
         <!-- <div mat-card-avatar class="example-header-image"></div> -->
         <mat-card-title>{{movie.original_title}}</mat-card-title>
@@ -13,8 +13,9 @@
         </p>
     </mat-card-content> -->
     <mat-card-actions>
-        <button mat-button *ngIf="flag1" (click)=deleteCollection()>UNLIKE</button>
-        <button mat-button *ngIf="flag" (click)=addCollection()>LIKE</button>
+        <button mat-button *ngIf="flag1" (click)=deleteCollection()>DELETE</button>
+        <button mat-button *ngIf="flag" (click)=addCollection()>ADD TO FAV</button>
         <button mat-button>COMMENT</button>
     </mat-card-actions>
 </mat-card>
+<!-- <button (click)="cout()"> calling outside</button> -->
